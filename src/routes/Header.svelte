@@ -20,10 +20,10 @@
 				<a href="/">*insert screams* WHAT ARE YOU DOING IN MY ROOM</a>
 			</li>
 			<li aria-current={page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">*insert incoherant ramblling about my ROOM*</a>
+				<a href="/about">*insert incoherant ramblling about my room*</a>
 			</li>
 			<li aria-current={page.url.pathname.startsWith('/jrff') ? 'page' : undefined}>
-				<a href="/sverdle">jrff</a>
+				<a href="/sverdle">game</a>
 			</li>
 		</ul>
 		<svg viewBox="0 0 2 3" aria-hidden="true">

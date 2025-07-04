@@ -3,6 +3,8 @@ export const words = [
 	'pneumonoultramicroscopicsilicovolcanoconiosis',
 	'mum',
 	'pummel',
+	'bob',
+	'fourtwenty',
 	'aback',
 	'abase',
 	'abate',
