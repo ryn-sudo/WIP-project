@@ -17,10 +17,10 @@
 		</svg>
 		<ul>
 			<li aria-current={page.url.pathname === '/' ? 'page' : undefined}>
-				<a href="/">*insert screams* WHAT ARE YOU DOING IN MY ROOM</a>
+				<a href="/">hiya</a>
 			</li>
 			<li aria-current={page.url.pathname === '/about' ? 'page' : undefined}>
-				<a href="/about">*insert incoherant ramblling about my room*</a>
+				<a href="/about">about me</a>
 			</li>
 			<li aria-current={page.url.pathname.startsWith('/jrff') ? 'page' : undefined}>
 				<a href="/sverdle">game</a>
