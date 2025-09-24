@@ -23,7 +23,6 @@
 
 	<h2>
 		made by svelte and ryn
-	<strong>src/routes/+page.svelte</strong>
 	</h2>
 
 	<Counter />
