@@ -23,7 +23,7 @@
 	let currentGuess = $derived(data.guesses[i] || '');
 
 	/** Whether the current guess can be submitted */
-	let submittable = $derived(currentGuess.length <= 45);
+	let submittable = $derived(currentGuess.length <=10 );
 
 	const { classnames, description } = $derived.by(() => {
 		/**
@@ -38,7 +38,7 @@
 		let description: Record<string, string> = {};
 		data.answers.forEach((answer, i) => {
 			const guess = data.guesses[i];
-			for (let i = 0; i < 45; i += 1) {
+			for (let i = 0; i < 10; i += 1) {
 				const letter = guess[i];
 				if (answer[i] === 'x') {
 					classnames[letter] = 'exact';
@@ -65,7 +65,7 @@
 		if (key === 'backspace') {
 			currentGuess = currentGuess.slice(0, -1);
 			if (form?.badGuess) form.badGuess = false;
-		} else if (currentGuess.length < 45
+		} else if (currentGuess.length < 10
 		) {
 			currentGuess += key;
 		}
@@ -108,11 +108,11 @@
 	<a class="how-to-play" href="/sverdle/how-to-play">How to play</a>
 
 	<div class="grid" class:playing={!won} class:bad-guess={form?.badGuess}>
-		{#each Array.from(Array(45).keys()) as row (row)}
+		{#each Array.from(Array(10).keys()) as row (row)}
 			{@const current = row === i}
 			<h2 class="visually-hidden">Row {row + 1}</h2>
 			<div class="row" class:current>
-				{#each Array.from(Array(45).keys()) as column (column)}
+				{#each Array.from(Array(10).keys()) as column (column)}
 					{@const guess = current ? currentGuess : data.guesses[row]}
 					{@const answer = data.answers[row]?.[column]}
 					{@const value = guess?.[column] ?? ''}
@@ -141,7 +141,7 @@
 	</div>
 
 	<div class="controls">
-		{#if won || data.answers.length >= 45}
+		{#if won || data.answers.length >= 10}
 			{#if !won && data.answer}
 				<p>the answer was "{data.answer}"</p>
 			{/if}
@@ -245,7 +245,7 @@
 
 	.grid .row {
 		display: grid;
-		grid-template-columns: repeat(45, 1fr);
+		grid-template-columns: repeat(10, 1fr);
 		grid-gap: 0.2rem;
 		margin: 0 0 0.2rem 0;
 	}

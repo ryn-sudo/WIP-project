@@ -1,6 +1,5 @@
 /** The list of possible words */
 export const words = [
-	'pneumonoultramicroscopicsilicovolcanoconiosis',
 	'mum',
 	'pummel',
 	'bob',

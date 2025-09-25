@@ -20,7 +20,7 @@ export const load = (({ cookies }) => {
 		/**
 		 * The correct answer, revealed if the game is over
 		 */
-		answer: game.answers.length >= 45 ? game.answer : null
+		answer: game.answers.length >= 10 ? game.answer : null
 	};
 }) satisfies PageServerLoad;
 
